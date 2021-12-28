@@ -43,11 +43,10 @@ def check_success(check_array)
   y = Success_array.length
   z = 0
   while y != z
-    if (check_array & Success_array[z]).length == 3
-      return 1
-    else
-      z += 1
-    end
+    return 1 if (check_array & Success_array[z]).length == 3
+
+    z += 1
+
   end
   0 if z == y
 end
